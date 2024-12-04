@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixFusion</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="sidebar">
+        <div class="top">
+            <div class="logo">
+                <img src="logo2.png" alt="logo">
+                <span>PixFusion</span>
+            </div>
+            <i class='bx bx-menu' id="btn"></i>
+        </div>
+        <ul>
+            <li>
+                <a href="#">
+                    <i class='bx bx-home'></i>
+                    <span class="nav-item">Home</span>
+                </a>
+                <span class="tooltip">Home</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-search'></i>
+                    <span class="nav-item">Image Search</span>
+                </a>
+                <span class="tooltip">Image Search</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-grid-alt'></i>
+                    <span class="nav-item">All Images</span>
+                </a>
+                <span class="tooltip">All Images</span>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bx-shield-minus'></i>
+                    <span class="nav-item">Meta Data Stripping</span>
+                </a>
+                <span class="tooltip">Meta Data Stripping</span>
+            </li>
+        </ul>
+        <div class="bottom-section">
+            <li>
+                <a href="#">
+                    <i class='bx bx-cog'></i>
+                    <span class="nav-item">Settings</span>
+                </a>
+                <span class="tooltip">Settings</span>
+            </li>
+        </div>        
+    </div>
+
+    <div class="main-content">
+        <div class="container">
+            <h1>PixFusion</h1>
+        </div>
+        <div class="searchbar_container">
+            <form action="" class="searchbar">
+                <input type="text" placeholder="Search", name="q">
+                <button type="submit"><i class='bx bx-search' ></i></button>
+            </form>
+        </div>
+    </div>
+
+    
+    
+    <script>
+        let btn = document.querySelector('#btn');
+        let sidebar = document.querySelector('.sidebar');
+
+        btn.onclick = function() {
+            sidebar.classList.toggle('active');
+        };
+    </script>
+</body>
+</html>

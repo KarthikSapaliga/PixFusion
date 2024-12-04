@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+:root{
+    --bg: #333;
+    --bg2: #eee;
+    --txtclr: #333;
+    --height: 42px;
+    --border-radius: 50px;
+    --transitiontime: 0.4s;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+    font-family: "Quicksand" ,Arial, Helvetica, sans-serif;
+}
+
+.sidebar-container{
+    position: relative;
+    height: 100vh;
+    background: var(--bg);
+    padding: 0 10px;
+    overflow: hidden;
+    transition: width var(--transitiontime) ease;
+}
+
+.sidebar-container.open{
+    width: 250px;
+}
+
+.sidebar-container.close{
+    width: 65px;
+}
+
+.title-section{
+    border-bottom: 2px solid #aaa;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.title-section h1{
+    font-size: 2rem;
+    color: #aaa;
+}
+
+.sidebar-container.close .title-section{
+    justify-content: center;
+}
+
+.sidebar-container.close .title-section h1{
+    display: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+ul li{
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    background: var(--bg2);
+    height: var(--height);
+    display: flex;
+    align-items: center;
+    border-radius: var(--border-radius);
+    transition: width var(--transitiontime) ease;
+}
+
+.sidebar-container.close ul li{
+    width: var(--height);
+    justify-content: center;
+}
+
+ul li div{
+    display: flex;
+    align-items: center;
+}
+
+ul li div span{
+    text-wrap: nowrap;
+    margin-left: 10px;
+    color: var(--txtclr);
+}
+
+.sidebar-container.close ul li div span{
+    display: none;
+}
+
+.settings{
+    position: absolute;
+    bottom: 10px;
+    padding: 10px;
+    width: calc(100% - 20px);
+    height: var(--height);
+    border-radius: var(--border-radius);
+    background: var(--bg2);
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-container.close .settings{
+    justify-content: center;
+}
+
+.settings span{
+    margin-left: 10px;
+    color: var(--txtclr);
+}
+
+
+
+
+.sidebar-container.close .settings span{
+    display: none;
+}
+
+.sidebar-toggle-btn{
+    color: #aaa;
+}
+
+.icons{
+    transform: scale(1.2);
+    margin-left: 10px;
+    color: var(--txtclr);
+}
+
+.sidebar-container.close .icons{
+    margin: 0;
+}
