@@ -1,6 +1,7 @@
 # PixFushion
 
 ```bash
+git clone https://github.com/KarthikSapaliga/PixFushion.git
 cd PixFushion
 npm install
 npm run dev
