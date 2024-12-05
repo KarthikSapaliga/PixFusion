@@ -13,7 +13,7 @@ const App = () => {
 	return (
 		<main>
 			<Sidebar handleSectionChange={handleSectionChange} activeSection={activeSection}/>
-			<Main onSectionChange={handleSectionChange} activeSection={activeSection} />
+			<Main handleSectionChange={handleSectionChange} activeSection={activeSection} />
 		</main>
 	)
 }

@@ -7,6 +7,7 @@
     --height: 42px;
     --border-radius: 50px;
     --transitiontime: 0.4s;
+    --active-clr: #6bceff;
 }
 
 *{
@@ -72,6 +73,10 @@ ul li{
     transition: width var(--transitiontime) ease;
 }
 
+ul li.active-section{
+    background: var(--active-clr);
+}
+
 .sidebar-container.close ul li{
     width: var(--height);
     justify-content: center;
@@ -104,6 +109,12 @@ ul li div span{
     align-items: center;
 }
 
+
+.settings.active-section{
+    background: var(--active-clr);
+}
+
+
 .sidebar-container.close .settings{
     justify-content: center;
 }
@@ -112,6 +123,7 @@ ul li div span{
     margin-left: 10px;
     color: var(--txtclr);
 }
+
 
 
 

@@ -1,17 +1,18 @@
 import { BiSearch } from "react-icons/bi";
+import './Main.css'
 
 const Main = ({ handleSectionChange, activeSection }) => {
     return (
         <div className='container'>
             { activeSection==='home' && (
                 <div id="home">
-                    <div className="search-box">
+                    <div className="search-box" onClick={()=>handleSectionChange('search')}>
                         <BiSearch />
                         <span>Search here...</span>
                     </div>
                     <div className="all-images">All Images</div>
-                    <div className="categorize">Categorize</div>
-                    <div className="metadat-stripp">Metadata</div>
+                    <div className="categorize" onClick={()=>handleSectionChange('categorizer')} >Categorize</div>
+                    <div className="metadat-stripp" onClick={()=>handleSectionChange('metadata-stripper')} >Metadata</div>
                 </div>
             ) }
             { activeSection==='search' && (
