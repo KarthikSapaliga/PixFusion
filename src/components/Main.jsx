@@ -2,6 +2,7 @@ import { BiSearch } from "react-icons/bi";
 import "./Main.css";
 
 import Metadata from "./Metadata";
+import ImageClassifier from "./ImageClassifier";
 
 
 const Main = ({ handleSectionChange, activeSection }) => {
@@ -39,9 +40,7 @@ const Main = ({ handleSectionChange, activeSection }) => {
                 </div>
             )}
             {activeSection === "categorizer" && (
-                <div id="categorizer">
-                    <h1>Categorizer</h1>
-                </div>
+                <ImageClassifier />
             )}
             {activeSection === "metadata-stripper" && (
                 <Metadata />
