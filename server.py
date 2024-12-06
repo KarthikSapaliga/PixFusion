@@ -6,7 +6,7 @@ import time
 import platform
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
-from metadata_cleaner import clean_metadata  
+from pkg.metadata_cleaner import clean_metadata  
 
 app = Flask(__name__)
 CORS(app)
@@ -47,7 +47,6 @@ def upload_file():
 
 @app.route("/download/<filename>", methods=["GET"])
 def download_file(filename):
-    """Download the cleaned file."""
     file_path = os.path.join("server", "uploads", filename)
     print(f"Attempting to download file from: {file_path}")  # Debug line
     if not os.path.isfile(file_path):
@@ -55,8 +54,6 @@ def download_file(filename):
         return jsonify({"error": "File not found"}), 404
 
     return send_from_directory(os.path.join("server", "uploads"), filename, as_attachment=True)
-
-
 
 if __name__ == "__main__":
     app.run(debug=True)
