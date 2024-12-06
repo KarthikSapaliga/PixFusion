@@ -28,4 +28,4 @@ env
 server/uploads
 __pycache__
 
-uploads
+uploads/*
