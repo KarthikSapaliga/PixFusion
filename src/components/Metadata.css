@@ -103,7 +103,7 @@
     justify-content: space-between;
 }
 
-.cleaned-metadata h1 button{
+.cleaned-metadata h1 a{
     padding: 0 10px;
     border: none;
     border-radius: 50px;

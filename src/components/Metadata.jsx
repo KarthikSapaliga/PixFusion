@@ -27,7 +27,7 @@ const Metadata = () => {
         formData.append("file", selectedFile);
 
         try {
-            const response = await axios.post("http://localhost:5000/upload", formData, {
+            const response = await axios.post("http://localhost:5000/metdata-stripper", formData, {
                 headers: {
                     "Content-Type": "multipart/form-data",
                 },
@@ -39,20 +39,11 @@ const Metadata = () => {
             setMetadata(metadata_preview);
             const filename = cleaned_file_path.split("/").pop();
             setCleanedFileUrl(filename);
-            setDownloadUrl(`http://localhost:5000/download/${cleaned_file_path.split("/").pop()}`);
+            setDownloadUrl(filename);
         } catch (error) {
             console.error("Error uploading file:", error);
             alert("Failed to upload file.");
         }
-    };
-
-    const handleDownload = () => {
-        if (!downloadUrl) {
-            alert("No cleaned file available.");
-            return;
-        }
-        console.log(downloadUrl)
-        window.location.href = downloadUrl;
     };
 
     return (
@@ -80,7 +71,7 @@ const Metadata = () => {
                     <h1>
                         <span>Cleaned Metadata</span>
                         {cleanedFileUrl && (
-                            <button onClick={handleDownload}>Download Cleaned File</button>
+                            <a href={downloadUrl} download="cleaned">Download</a>
                         )}
                     </h1>
                     <pre>{metadata}</pre>

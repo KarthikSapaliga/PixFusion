@@ -11,7 +11,7 @@ from pkg.metadata_cleaner import clean_metadata
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/upload", methods=["POST"])
+@app.route("/metdata-stripper", methods=["POST"])
 def upload_file():
 
     if "file" not in request.files:
@@ -43,17 +43,6 @@ def upload_file():
         return jsonify(response), 200
     else:
         return jsonify({"error": "Failed to clean metadata"}), 500
-
-
-@app.route("/download/<filename>", methods=["GET"])
-def download_file(filename):
-    file_path = os.path.join("server", "uploads", filename)
-    print(f"Attempting to download file from: {file_path}")  # Debug line
-    if not os.path.isfile(file_path):
-        print(f"File not found: {file_path}")  # Debug line
-        return jsonify({"error": "File not found"}), 404
-
-    return send_from_directory(os.path.join("server", "uploads"), filename, as_attachment=True)
 
 if __name__ == "__main__":
     app.run(debug=True)
