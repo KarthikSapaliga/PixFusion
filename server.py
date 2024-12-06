@@ -6,10 +6,27 @@ import time
 import platform
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
+
 from pkg.metadata_cleaner import clean_metadata  
+from pkg.image_classifier import getClassifiedImagesData
 
 app = Flask(__name__)
 CORS(app)
+
+@app.route('/')
+def index():
+    return '''
+    <center>
+        <h1 style="color:green; font-size: 5em; margin-top:20px">
+            Server is running...
+        </h1>
+    </center>
+    '''
+
+@app.route('/api/images', methods=['GET'])
+def get_images():
+    data = getClassifiedImagesData()
+    return jsonify(data)
 
 @app.route("/metdata-stripper", methods=["POST"])
 def upload_file():
@@ -43,6 +60,9 @@ def upload_file():
         return jsonify(response), 200
     else:
         return jsonify({"error": "Failed to clean metadata"}), 500
+    
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
