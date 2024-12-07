@@ -12,7 +12,7 @@ const ImageClassifier = () => {
 
     useEffect(() => {
         axios
-            .get("http://127.0.0.1:5000/api/images")
+            .get("http://127.0.0.1:5000/classifier")
             .then((response) => {
                 setCategory(response.data);
                 setLoading(false);
