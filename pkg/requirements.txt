@@ -2,3 +2,4 @@ torch
 transformers 
 scikit-learn 
 pillow
+faiss-cpu
