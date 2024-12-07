@@ -9,6 +9,7 @@ from flask_cors import CORS
 
 from pkg.metadata_cleaner import clean_metadata  
 from pkg.image_classifier import getClassifiedImagesData
+from pkg.img_search import search_similar_images
 
 app = Flask(__name__)
 CORS(app)
@@ -23,7 +24,30 @@ def index():
     </center>
     '''
 
-@app.route('/api/images', methods=['GET'])
+@app.route('/all-images',methods=['GET'])
+def get_all_images():
+    IMAGE_FOLDER = 'static/img'
+    try:
+        image_files = [img for img in os.listdir(IMAGE_FOLDER) if os.path.isfile(os.path.join(IMAGE_FOLDER, img))]
+        image_urls = [f"{img}" for img in image_files]
+        return jsonify(image_urls)
+    except Exception as e:
+        return jsonify({"error": str(e)}), 500
+
+
+@app.route("/search", methods=["POST"])
+def img_search():
+    data = request.get_json()
+    text_query = data.get("query", "")
+
+    if not text_query or index is None:
+        return jsonify({"results": []})
+
+    results = search_similar_images(text_query, 10)
+    return jsonify({"results": results})
+
+
+@app.route('/classifier', methods=['GET'])
 def get_images():
     data = getClassifiedImagesData()
     return jsonify(data)
