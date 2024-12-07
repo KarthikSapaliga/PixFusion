@@ -9,7 +9,7 @@ import { BiShield } from "react-icons/bi";
 import { IoSettingsOutline } from "react-icons/io5";
 
 const Sidebar = ({ handleSectionChange, activeSection }) => {
-    const [isOpen, setIsOpen] = useState(true);
+    const [isOpen, setIsOpen] = useState(false);
     const toggleSidebar = () => setIsOpen((isOpen) => !isOpen);
 
     return (
