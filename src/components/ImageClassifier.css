@@ -28,14 +28,15 @@
 
 .category div {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 10px;
 }
 
 
 .category img {
-    height: 100px;
-    width: 150px;
+    height: 150px;
+    width: 220px;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
