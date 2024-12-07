@@ -1,0 +1,23 @@
+/* parent container style is in Main.css */
+
+.image-conatiner{
+    width: 100%;
+    height: calc(100vh - 100px);
+    overflow-y: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;    
+}
+
+.image-conatiner img{
+    width: 180px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.image-conatiner img:hover{
+    transform: scale(1.05);
+}
