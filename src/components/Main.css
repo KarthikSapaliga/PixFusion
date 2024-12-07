@@ -58,3 +58,33 @@
     background: var(--search-bg);
     margin: 10px;
 }
+
+#all-images{
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+}
+
+#all-images .header{
+    display: flex;
+    border-bottom: 2px solid white;
+    margin: 10px 20px 20px;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+#all-images .header h1{
+    width: 100%;
+    color: #aaa;
+}
+
+#all-images .header button{
+    padding: 10px 20px;
+    background: #aaa;
+    border: none;
+    border-radius: 50px;
+}
+
+#all-images .header button:active{
+    transform: scale(0.95);
+}

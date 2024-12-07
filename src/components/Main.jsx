@@ -1,8 +1,10 @@
 import { BiSearch } from "react-icons/bi";
 import "./Main.css";
 
+import Search from "./Search";
 import Metadata from "./Metadata";
 import ImageClassifier from "./ImageClassifier";
+import AllImages from "./AllImages";
 
 
 const Main = ({ handleSectionChange, activeSection }) => {
@@ -18,7 +20,10 @@ const Main = ({ handleSectionChange, activeSection }) => {
                         <span>Search here...</span>
                     </div>
                     <div className="feature-container">
-                        <div className="all-images">All Images</div>
+                        <div 
+                            className="all-images"
+                            onClick={() => handleSectionChange("allImages")}
+                        >All Images</div>
                         <div
                             className="categorizer"
                             onClick={() => handleSectionChange("categorizer")}
@@ -34,10 +39,17 @@ const Main = ({ handleSectionChange, activeSection }) => {
                     </div>
                 </div>
             )}
-            {activeSection === "search" && (
-                <div id="search">
-                    <h1>Search</h1>
+            {activeSection === "allImages" && (
+                <div id="all-images">
+                    <div className="header">
+                        <button onClick={() => handleSectionChange("home")}>Back</button>
+                        <h1>All Images</h1>
+                    </div>
+                    <AllImages />
                 </div>
+            )}
+            {activeSection === "search" && (
+                <Search />
             )}
             {activeSection === "categorizer" && (
                 <ImageClassifier />
