@@ -23,27 +23,25 @@ const Main = ({ handleSectionChange, activeSection }) => {
                         <BiSearch size={20}/>
                         <span>Search here...</span>
                     </div>
+
                     <div className="feature-container">
-                        <div
-                            className="all-images"
-                            onClick={() => handleSectionChange("allImages")}
-                        >
-                            <IoImages size={60} />
+                        <div className="all-images">
+                            <IoImages size={75} className="icons" />
                             <h1>All Images</h1>
+                            <p>Access and browse your entire image collection in one place with ease.</p>
+                            <button onClick={() => handleSectionChange("allImages")}>Click here</button>
                         </div>
-                        <div
-                            className="categorizer"
-                            onClick={() => handleSectionChange("categorizer")}
-                        >
-                            <MdCategory size={60} />
-                            <h1>Categorize</h1>
+                        <div className="categorizer">
+                            <MdCategory size={75} className="icons" />
+                            <h1>Image Classification</h1>
+                            <p>Organize and categorize your images instantly with advanced AI for better management.</p>
+                            <button onClick={() => handleSectionChange("categorizer")}>Click here</button>
                         </div>
-                        <div
-                            className="metadat-stripper"
-                            onClick={() => handleSectionChange("metadata-stripper")}
-                        >
-                            <MdSecurity size={60} />
-                            <h1>Metadata Stripp</h1>
+                        <div className="metadat-stripper">
+                            <MdSecurity size={75} className="icons" />
+                            <h1>Metadata Stripping</h1>
+                            <p>Remove sensitive metadata from your images to protect your privacy and simplify sharing.</p>
+                            <button onClick={() => handleSectionChange("metadata-stripper")}>Click here</button>
                         </div>
                     </div>
                 </div>
