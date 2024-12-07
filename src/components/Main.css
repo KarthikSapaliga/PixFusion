@@ -46,17 +46,43 @@
 }
 
 .feature-container div{
+    position: relative;
     margin-top: 50px;
-    width: 250px;
-    height: 270px;
+    width: 260px;
+    height: 320px;
     background: #aaa;
     border-radius: 10px;
+
+    padding: 12px;
+    text-align: center;
+}
+
+.feature-container div .icons{
+    margin: 15px 0 10px;
+    color: rgb(0, 84, 112);
 }
 
 .feature-container div h1{
-    font-size: 1em;
+    font-size: 1.25em;
 }
 
+.feature-container div p{
+    letter-spacing: 1px;
+    padding: 10px;
+    text-align: justify;
+}
+
+.feature-container div button{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
 
 
 
