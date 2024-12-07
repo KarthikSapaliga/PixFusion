@@ -1,10 +1,14 @@
-import { BiSearch } from "react-icons/bi";
 import "./Main.css";
 
 import Search from "./Search";
 import Metadata from "./Metadata";
 import ImageClassifier from "./ImageClassifier";
 import AllImages from "./AllImages";
+
+import { BiSearch } from "react-icons/bi";
+import { IoImages } from "react-icons/io5";
+import { MdCategory } from "react-icons/md";
+import { MdSecurity } from "react-icons/md";
 
 
 const Main = ({ handleSectionChange, activeSection }) => {
@@ -16,25 +20,30 @@ const Main = ({ handleSectionChange, activeSection }) => {
                         className="search-box"
                         onClick={() => handleSectionChange("search")}
                     >
-                        <BiSearch />
+                        <BiSearch size={20}/>
                         <span>Search here...</span>
                     </div>
                     <div className="feature-container">
-                        <div 
+                        <div
                             className="all-images"
                             onClick={() => handleSectionChange("allImages")}
-                        >All Images</div>
+                        >
+                            <IoImages size={60} />
+                            <h1>All Images</h1>
+                        </div>
                         <div
                             className="categorizer"
                             onClick={() => handleSectionChange("categorizer")}
                         >
-                            Categorize
+                            <MdCategory size={60} />
+                            <h1>Categorize</h1>
                         </div>
                         <div
                             className="metadat-stripper"
                             onClick={() => handleSectionChange("metadata-stripper")}
                         >
-                            Metadata
+                            <MdSecurity size={60} />
+                            <h1>Metadata Stripp</h1>
                         </div>
                     </div>
                 </div>
