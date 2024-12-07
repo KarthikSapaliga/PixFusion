@@ -1,115 +1,117 @@
-::-webkit-scrollbar{
-    width: 0;
+:root {
+    --meta-bg: #222;
+    --meta-primary: #fff;
+    --meta-secondary: #444;
+    --meta-accent: #24a0ff;
+
+    --meta-txt-dark: #222;
+    --meta-txt-light: #aaa;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
 }
 
 #metadata-stripper {
-    background: #222;
+    padding: 20px;
+    background: var(--meta-bg);
     width: 100%;
     height: 100vh;
     overflow-y: scroll;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px;
-}
-
-#metadata-stripper .image-select {
-    background: rgba(170, 170, 170, 0.2);
-    width: 40%;
-    min-width: 500px;
-    margin: 0 10px;
-    min-height: 500px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-   
-}
-
-#metadata-stripper .image-select .select{
-    margin-top: 120px;
     text-align: center;
 }
 
-#metadata-stripper .image-select .select input{
+#metadata-stripper .image-select {
+    margin: 20px auto 0;
+    background: var(--meta-secondary);
+    width: 350px;
+    border-radius: 10px;
+    color: var(--meta-txt-light);
+}
+
+#metadata-stripper .image-select input {
     display: none;
 }
 
-#metadata-stripper .image-select .select label div{
-    width: 300px;
-    height: 300px;
+#metadata-stripper .image-select label {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    font-size: 2rem;
-    color: #b1b3b2;
 }
 
-#metadata-stripper .image-select .select button{
-    margin: 20px;
+#metadata-stripper .image-select label h1 {
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+#metadata-stripper > button {
+    margin: 10px auto;
     padding: 10px 20px;
     border: none;
+    background: var(--meta-accent);
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 1rem;
     border-radius: 5px;
-    background: #61c161;
+    color: var(--meta-txt-dark);
 }
 
-#metadata-stripper .image-select .select button:active{
-    transform: scale(0.9);
+#metadata-stripper .loading{
+    display: flex;
+    justify-content: center;
 }
 
-#metadata-stripper .view-metadata {
-    width: 55%;
+#metadata-stripper .metadata-container {
+    margin: 20px 0;
+    display: flex;
+    text-align: left;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#metadata-stripper .metadata-container .original-metadata,
+#metadata-stripper .metadata-container .cleaned-metadata {
+    width: 45%;
     min-width: 500px;
-}
-
-.view-metadata .prev-metadata {
-    height: calc(50vh - 10px);
-    margin-bottom: 10px;
-}
-
-.view-metadata .cleaned-metadata {
-    height: calc(50vh - 30px);
-}
-
-.prev-metadata,
-.cleaned-metadata {
-    background: rgba(170, 170, 170, 0.2);
+    min-height: 200px;
     border-radius: 10px;
-    font-size: 15px;
-    font-family: monospace;
-    overflow-y: scroll;
-    overflow-x: hidden;
+    background: var(--meta-primary);
+    overflow: hidden;
 }
 
-.prev-metadata h1,
-.cleaned-metadata h1{
-    background: #555;
-    font-size: 1.1rem;
-    padding: 5px 20px;
-} 
+#metadata-stripper .metadata-container .original-metadata h1,
+#metadata-stripper .metadata-container .cleaned-metadata h1 {
+    font-size: 1.5em;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    background: var(--meta-secondary);
+    color: var(--meta-txt-light);
+}
 
-.prev-metadata pre,
-.cleaned-metadata pre{
-    /* Dont change the font family */
+#metadata-stripper .metadata-container .cleaned-metadata h1 {
+    justify-content: space-between;
+}
+
+#metadata-stripper .metadata-container .cleaned-metadata h1 a {
+    text-decoration: none;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background: var(--meta-accent);
+    color: var(--meta-txt-dark);
+}
+
+.original-metadata pre,
+.cleaned-metadata pre {
     font-family: 'Courier New', Courier, monospace;
     white-space: pre-wrap;
     padding: 10px;
     font-size: 0.8rem;
-    color: #777;
-}
-
-.cleaned-metadata h1{
-    display: flex;
-    justify-content: space-between;
-}
-
-.cleaned-metadata h1 a{
-    padding: 0 10px;
-    border: none;
-    border-radius: 50px;
-    background: #688f68;
-}
-
-.cleaned-metadata h1 button:active{
-    transform: scale(0.9);
+    color: var(--meta-txt-dark);
 }
