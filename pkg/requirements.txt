@@ -1,5 +1,8 @@
 torch 
 transformers 
 scikit-learn 
-pillow
+Pillow
 faiss-cpu
+numpy
+flask
+flask-cors
