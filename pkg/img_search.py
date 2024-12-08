@@ -25,9 +25,7 @@ def extract_image_features(image_path):
     return image_features.squeeze().numpy()
 
 def load_images_and_extract_features(image_dir):
-    print(f"Loading images from directory: {image_dir}")  
     image_paths = list(Path(image_dir).glob("*.jpg"))
-    print(f"Found {len(image_paths)} images.")  
     
     feature_list = []
     for image_path in image_paths:
@@ -40,7 +38,6 @@ def load_images_and_extract_features(image_dir):
             print(f"Saved features for {image_path}.")  
         feature_list.append(feature)
     feature_matrix = np.vstack(feature_list) if feature_list else np.empty((0, model.config.projection_dim))
-    print(f"Feature matrix shape: {feature_matrix.shape}")  
     return image_paths, feature_matrix
 
 def extract_text_features(text_query):
