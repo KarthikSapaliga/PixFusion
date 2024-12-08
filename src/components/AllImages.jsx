@@ -28,11 +28,10 @@ const AllImages = () => {
             });
     }, []);
 
-    if (error) return <div>{error}</div>;
-
     return (
         <div className="image-conatiner">
             {loading && <div><ReactLoading type='spin' /></div>}
+            {error && <div className="error">{error}</div>}
             {images.map((image, index) => (
                 <img
                     key={index}

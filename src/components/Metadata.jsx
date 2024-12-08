@@ -5,7 +5,6 @@ import './Metadata.css'
 
 import { BiSolidCloudUpload } from "react-icons/bi";
 import ReactLoading from 'react-loading';
-import { MdMargin } from 'react-icons/md';
 
 const Metadata = () => {
 
@@ -73,7 +72,7 @@ const Metadata = () => {
                 </div>
             )}
             
-            {error && <div>{error}</div>}
+            {error && <div className='error'>{error}</div>}
 
             { metadata && (
                 <div className="metadata-container">

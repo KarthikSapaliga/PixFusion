@@ -16,6 +16,7 @@ const Search = () => {
     const [query, setQuery] = useState("");
     const [results, setResults] = useState([]);
     const [loading, setLoading] = useState(false);
+    const [error, setError] = useState(null);
 
     const handleSearch = async () => {
         if (!query) return;
@@ -26,7 +27,7 @@ const Search = () => {
             });
             setResults(response.data.results);
         } catch (error) {
-            console.error("Error fetching search results:", error);
+            setError("Error fetching search results: "+ error.message);
         } finally {
             setLoading(false);
         }
@@ -47,6 +48,7 @@ const Search = () => {
 
             <div className="results">
                 {loading && <ReactLoading type='spin' /> }
+                {error && <div className='error'>{error}</div>}
                 {results.map((result, index) => (
                     <img src={`http://127.0.0.1:5000/${result[0]}`} alt="Result" key={index}/>
                 ))}
