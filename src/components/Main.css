@@ -2,14 +2,28 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-:root{
-    --search-bg: #aaa;
+:root {
+    --sidebar-item-height: 42px;
+    --sidebar-item-border-radius: 50px;
+    --transitiontime: 0.4s;
+
+    --primary: #12171e;
+    --secondary: rgb(28, 31, 38);
+
+    --tertiary: rgba(255, 255, 255, 0.1);
+    --bxshadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+
+    --accent: #6c5ce7;
+    --txtclr: #9aa3c7;
+
+    --gradient1: linear-gradient(45deg, #6c5ce7, #74ebd5);
 }
 
 .container{
-    background: #222;
+    background: var(--secondary);
     width: 100%;
     height: 100vh;
     display: flex;
@@ -24,13 +38,16 @@
 }
 
 #home .search-box{
-    background: var(--search-bg);
+    background: var(--tertiary);
+    color: var(--txtclr);
+    box-shadow: var(--bxshadow);
     display: flex;
     align-items: center;
     height: 55px;
     border-radius: 50px;
-    margin: 20px;
     padding: 0 40px;
+    width: 80%;
+    margin: 20px auto;
 }
 
 #home .search-box span{
@@ -50,26 +67,29 @@
     margin-top: 50px;
     width: 260px;
     height: 320px;
-    background: #aaa;
     border-radius: 10px;
-
     padding: 12px;
     text-align: center;
+
+    background: var(--tertiary);
+    box-shadow: var(--bxshadow);
 }
 
 .feature-container div .icons{
     margin: 15px 0 10px;
-    color: rgb(0, 84, 112);
+    color: var(--accent);
 }
 
 .feature-container div h1{
     font-size: 1.25em;
+    color: var(--accent);
 }
 
 .feature-container div p{
     letter-spacing: 1px;
     padding: 10px;
     text-align: justify;
+    color: var(--txtclr);
 }
 
 .feature-container div button{
@@ -78,22 +98,19 @@
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 20px;
-    background: blue;
-    color: white;
     border: none;
     border-radius: 5px;
+    letter-spacing: 1px;
+    color: var(--txtclr);
+    background: var(--accent);
+}
+
+.feature-container div button:hover{
+    opacity: 0.8;
 }
 
 
-
-
-
-
-
-
-
-
-
+/* ############################################################# */
 
 
 #all-images{
@@ -104,7 +121,7 @@
 
 #all-images .header{
     display: flex;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid var(--txtclr);
     margin: 10px 20px 20px;
     text-align: center;
     padding-bottom: 10px;
@@ -112,16 +129,24 @@
 
 #all-images .header h1{
     width: 100%;
-    color: #aaa;
+    color: var(--accent);
 }
 
 #all-images .header button{
     padding: 10px 20px;
-    background: #aaa;
+    background: var(--accent);
     border: none;
     border-radius: 50px;
 }
 
 #all-images .header button:active{
     transform: scale(0.95);
+}
+
+/* ############################################################# */
+
+.error {
+    font-size: 1.2rem;
+    color: #ff4757;
+    margin: 20px 0;
 }

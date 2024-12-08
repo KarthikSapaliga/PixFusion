@@ -1,40 +1,23 @@
 
-:root{
-    --bg: #333;
-    --bg2: #eee;
-    --txtclr: #333;
-    --height: 42px;
-    --border-radius: 50px;
-    --transitiontime: 0.4s;
-    --active-clr: #6bceff;
-}
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    user-select: none;
-    font-family: 'Arial', sans-serif;
-}
-
-.sidebar-container{
+.sidebar-container {
     position: relative;
     height: 100vh;
-    background: var(--bg);
     padding: 0 10px;
     overflow: hidden;
     transition: width var(--transitiontime) ease;
+    background: var(--primary);
 }
 
-.sidebar-container.open{
+.sidebar-container.open {
     width: 250px;
+    flex-shrink: 0;
 }
 
-.sidebar-container.close{
+.sidebar-container.close {
     width: 65px;
 }
 
-.title-section{
+.title-section {
     border-bottom: 2px solid #aaa;
     position: relative;
     display: flex;
@@ -43,104 +26,101 @@
     height: 50px;
 }
 
-.title-section h1{
+.title-section h1 {
     font-size: 2rem;
-    color: #aaa;
+    color: var(--accent);
 }
 
-.sidebar-container.close .title-section{
+.sidebar-container.close .title-section {
     justify-content: center;
 }
 
-.sidebar-container.close .title-section h1{
+.sidebar-container.close .title-section h1 {
     display: none;
 }
 
-ul{
-    list-style-type: none;
+.sidebar-toggle-btn {
+    color: var(--accent);
 }
 
-ul li{
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
-    background: var(--bg2);
-    height: var(--height);
-    display: flex;
-    align-items: center;
-    border-radius: var(--border-radius);
-    transition: width var(--transitiontime) ease;
-}
-
-ul li.active-section{
-    background: var(--active-clr);
-}
-
-.sidebar-container.close ul li{
-    width: var(--height);
-    justify-content: center;
-}
-
-ul li div{
-    display: flex;
-    align-items: center;
-}
-
-ul li div span{
-    text-wrap: nowrap;
-    margin-left: 10px;
-    color: var(--txtclr);
-}
-
-.sidebar-container.close ul li div span{
-    display: none;
-}
-
-.settings{
-    position: absolute;
-    bottom: 10px;
-    padding: 10px;
-    width: calc(100% - 20px);
-    height: var(--height);
-    border-radius: var(--border-radius);
-    background: var(--bg2);
-    display: flex;
-    align-items: center;
-}
-
-
-.settings.active-section{
-    background: var(--active-clr);
-}
-
-
-.sidebar-container.close .settings{
-    justify-content: center;
-}
-
-.settings span{
-    margin-left: 10px;
-    color: var(--txtclr);
-}
-
-
-
-
-
-.sidebar-container.close .settings span{
-    display: none;
-}
-
-.sidebar-toggle-btn{
-    color: #aaa;
-}
-
-.icons{
+.sidebar-container .icons {
     transform: scale(1.2);
     margin-left: 10px;
     color: var(--txtclr);
 }
 
-.sidebar-container.close .icons{
+.sidebar-container.close .icons {
     margin: 0;
 }
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    background: var(--tertiary);
+    height: var(--sidebar-item-height);
+    display: flex;
+    align-items: center;
+    border-radius: var(--sidebar-item-border-radius);
+    transition: width var(--transitiontime) ease;
+    box-shadow: var(--bxshadow);
+}
+
+ul li.active-section {
+    background: var(--accent);
+}
+
+.sidebar-container.close ul li {
+    width: var(--sidebar-item-height);
+    justify-content: center;
+}
+
+ul li div {
+    display: flex;
+    align-items: center;
+}
+
+ul li div span {
+    text-wrap: nowrap;
+    margin-left: 10px;
+    color: var(--txtclr);
+}
+
+.sidebar-container.close ul li div span {
+    display: none;
+}
+
+.settings {
+    position: absolute;
+    bottom: 10px;
+    padding: 10px;
+    width: calc(100% - 20px);
+    height: var(--sidebar-item-height);
+    border-radius: var(--sidebar-item-border-radius);
+    background: var(--tertiary);
+    display: flex;
+    align-items: center;
+    box-shadow: var(--bxshadow);
+}
+
+.settings.active-section {
+    background: var(--accent);
+}
+
+.sidebar-container.close .settings {
+    justify-content: center;
+}
+
+.settings span {
+    margin-left: 10px;
+    color: var(--txtclr);
+}
+
+.sidebar-container.close .settings span {
+    display: none;
+}
+

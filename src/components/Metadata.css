@@ -1,20 +1,9 @@
-:root {
-    --meta-bg: #222;
-    --meta-primary: #fff;
-    --meta-secondary: #444;
-    --meta-accent: #24a0ff;
-
-    --meta-txt-dark: #222;
-    --meta-txt-light: #aaa;
-}
-
 ::-webkit-scrollbar {
     width: 5px;
 }
 
 #metadata-stripper {
     padding: 20px;
-    background: var(--meta-bg);
     width: 100%;
     height: 100vh;
     overflow-y: scroll;
@@ -23,10 +12,11 @@
 
 #metadata-stripper .image-select {
     margin: 20px auto 0;
-    background: var(--meta-secondary);
     width: 350px;
     border-radius: 10px;
-    color: var(--meta-txt-light);
+    color: var(--txtclr);
+    background: var(--tertiary);
+    box-shadow: var(--bxshadow);
 }
 
 #metadata-stripper .image-select input {
@@ -45,19 +35,19 @@
     font-size: 2rem;
 }
 
-#metadata-stripper > button {
+#metadata-stripper>button {
     margin: 10px auto;
     padding: 10px 20px;
     border: none;
-    background: var(--meta-accent);
     font-weight: 300;
     letter-spacing: 1px;
     font-size: 1rem;
     border-radius: 5px;
-    color: var(--meta-txt-dark);
+    color: var(--txtclr2);
+    background: var(--accent);
 }
 
-#metadata-stripper .loading{
+#metadata-stripper .loading {
     display: flex;
     justify-content: center;
 }
@@ -77,8 +67,9 @@
     min-width: 500px;
     min-height: 200px;
     border-radius: 10px;
-    background: var(--meta-primary);
     overflow: hidden;
+    background: var(--primary);
+    box-shadow: var(--bxshadow);
 }
 
 #metadata-stripper .metadata-container .original-metadata h1,
@@ -88,8 +79,9 @@
     display: flex;
     align-items: center;
     padding: 0 10px;
-    background: var(--meta-secondary);
-    color: var(--meta-txt-light);
+    background: var(--tertiary);
+    color: var(--txtclr);
+    
 }
 
 #metadata-stripper .metadata-container .cleaned-metadata h1 {
@@ -103,8 +95,8 @@
     font-size: 1rem;
     padding: 10px 20px;
     border-radius: 5px;
-    background: var(--meta-accent);
-    color: var(--meta-txt-dark);
+    background: var(--accent);
+    color: var(--txtclr2);
 }
 
 .original-metadata pre,
@@ -113,5 +105,5 @@
     white-space: pre-wrap;
     padding: 10px;
     font-size: 0.8rem;
-    color: var(--meta-txt-dark);
+    color: var(--txtclr);
 }
