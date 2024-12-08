@@ -1,18 +1,21 @@
 # PixFushion
 
-```bash
+```powershell
 git clone https://github.com/KarthikSapaliga/PixFushion.git
+
 cd PixFushion
 npm install
+
+python -m venv env
+.\env\Scripts\Activate.ps1
+
+cd pkg
+pip install -r requirements.txt
+
+cd ..
+
+# Run both scripts simultaneously
+python server.py
 npm run dev
 ```
-
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
