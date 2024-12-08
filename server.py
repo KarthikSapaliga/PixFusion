@@ -1,9 +1,6 @@
 import os
-import shutil
 import subprocess
-import tempfile
-import time
-import platform
+import shutil
 from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 
@@ -18,7 +15,7 @@ CORS(app)
 def index():
     return '''
     <center>
-        <h1 style="color:green; font-size: 5em; margin-top:20px">
+        <h1 style="color:green; font-size: 4em; margin-top:50px">
             Server is running...
         </h1>
     </center>
@@ -62,8 +59,27 @@ def upload_file():
     if file.filename == "":
         return jsonify({"error": "No selected file"}), 400
     
-    file_path = os.path.join("uploads", file.filename)
+    # Ensure the uploads directory exists
     os.makedirs("uploads", exist_ok=True)
+
+    # Debug print to verify folder path
+    print(f"Uploads folder path: {os.path.abspath('uploads')}")
+
+    # Remove all files and folders in the uploads directory
+    for filename in os.listdir("uploads"):
+        file_path = os.path.join("uploads", filename)
+        try:
+            if os.path.isfile(file_path):
+                os.remove(file_path)
+                print(f"Deleted file: {file_path}")
+            elif os.path.isdir(file_path):
+                shutil.rmtree(file_path)
+                print(f"Deleted folder: {file_path}")
+        except Exception as e:
+            print(f"Error deleting {file_path}: {e}")
+
+
+    file_path = os.path.join("uploads", file.filename)
     file.save(file_path)
 
     try:
