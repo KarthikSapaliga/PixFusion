@@ -28,7 +28,5 @@ env
 server/uploads
 __pycache__
 
-uploads/*
-
 static/img/*
 static/features/*
