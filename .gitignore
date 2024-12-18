@@ -27,6 +27,3 @@ dist-ssr
 env
 server/uploads
 __pycache__
-
-static/img/*
-static/features/*
