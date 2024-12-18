@@ -6,7 +6,7 @@ import ImageClassifier from "./ImageClassifier";
 import AllImages from "./AllImages";
 
 import { BiSearch } from "react-icons/bi";
-import { IoImages } from "react-icons/io5";
+import { IoMdImages } from "react-icons/io";
 import { MdCategory } from "react-icons/md";
 import { MdSecurity } from "react-icons/md";
 
@@ -26,7 +26,7 @@ const Main = ({ handleSectionChange, activeSection }) => {
 
                     <div className="feature-container">
                         <div className="all-images">
-                            <IoImages size={75} className="icons" />
+                            <IoMdImages size={75} className="icons" />
                             <h1>All Images</h1>
                             <p>Access and browse your entire image collection in one place with ease.</p>
                             <button onClick={() => handleSectionChange("allImages")}>Click here</button>
