@@ -43,7 +43,7 @@
     letter-spacing: 1px;
     font-size: 1rem;
     border-radius: 5px;
-    color: var(--txtclr2);
+    color: var(--txtclr);
     background: var(--accent);
 }
 

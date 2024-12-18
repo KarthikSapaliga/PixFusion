@@ -1,17 +1,3 @@
-:root {
-    --primary: #12171e;
-    --secondary: rgb(28, 31, 38);
-
-    --tertiary: rgba(255, 255, 255, 0.1);
-    --bxshadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-
-    --accent: #6c5ce7;
-    --txtclr: #9aa3c7;
-    --txtclr2: #222;
-
-    --gradient1: linear-gradient(45deg, #6c5ce7, #74ebd5);
-}
-
 #search{
     width: 100%;
     height: 100vh;

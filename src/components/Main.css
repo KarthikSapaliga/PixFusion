@@ -1,28 +1,11 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
 }
 
-:root {
-    --sidebar-item-height: 42px;
-    --sidebar-item-border-radius: 50px;
-    --transitiontime: 0.4s;
-
-    --primary: #12171e;
-    --secondary: rgb(28, 31, 38);
-
-    --tertiary: rgba(255, 255, 255, 0.1);
-    --bxshadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-
-    --accent: #6c5ce7;
-    --txtclr: #9aa3c7;
-
-    --gradient1: linear-gradient(45deg, #6c5ce7, #74ebd5);
-}
-
-.container{
+.container {
     background: var(--secondary);
     width: 100%;
     height: 100vh;
@@ -32,12 +15,12 @@
     overflow: hidden;
 }
 
-#home{
+#home {
     max-height: 90vh;
     overflow-y: scroll;
 }
 
-#home .search-box{
+#home .search-box {
     background: var(--tertiary);
     color: var(--txtclr);
     box-shadow: var(--bxshadow);
@@ -50,11 +33,11 @@
     margin: 20px auto;
 }
 
-#home .search-box span{
+#home .search-box span {
     margin-left: 10px;
 }
 
-.feature-container{
+.feature-container {
     margin: 20px;
     display: flex;
     flex-wrap: wrap;
@@ -62,7 +45,7 @@
     gap: 30px;
 }
 
-.feature-container div{
+.feature-container div {
     position: relative;
     margin-top: 50px;
     width: 260px;
@@ -75,24 +58,26 @@
     box-shadow: var(--bxshadow);
 }
 
-.feature-container div .icons{
+.feature-container div .icons {
     margin: 15px 0 10px;
-    color: var(--accent);
+    color: var(--txtclr);
+    padding: 10px;
+    background: var(--accent);
+    border-radius: 50px;
 }
 
-.feature-container div h1{
+.feature-container div h1 {
     font-size: 1.25em;
     color: var(--accent);
 }
 
-.feature-container div p{
+.feature-container div p {
     letter-spacing: 1px;
     padding: 10px;
-    text-align: justify;
     color: var(--txtclr);
 }
 
-.feature-container div button{
+.feature-container div button {
     position: absolute;
     bottom: 20px;
     left: 50%;
@@ -105,7 +90,7 @@
     background: var(--accent);
 }
 
-.feature-container div button:hover{
+.feature-container div button:hover {
     opacity: 0.8;
 }
 
@@ -113,13 +98,13 @@
 /* ############################################################# */
 
 
-#all-images{
+#all-images {
     width: 100%;
     height: 100vh;
     padding: 10px;
 }
 
-#all-images .header{
+#all-images .header {
     display: flex;
     border-bottom: 2px solid var(--txtclr);
     margin: 10px 20px 20px;
@@ -127,19 +112,19 @@
     padding-bottom: 10px;
 }
 
-#all-images .header h1{
+#all-images .header h1 {
     width: 100%;
     color: var(--accent);
 }
 
-#all-images .header button{
+#all-images .header button {
     padding: 10px 20px;
     background: var(--accent);
     border: none;
     border-radius: 50px;
 }
 
-#all-images .header button:active{
+#all-images .header button:active {
     transform: scale(0.95);
 }
 
