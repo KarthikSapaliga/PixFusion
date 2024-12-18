@@ -11,30 +11,6 @@ model = CLIPModel.from_pretrained("zer0int/CLIP-GmP-ViT-L-14")
 processor = CLIPProcessor.from_pretrained("zer0int/CLIP-GmP-ViT-L-14")
 
 # Define categories (labels) for classification
-
-# categories = [
-#     "Birds",
-#     "Animals",
-#     "People",
-#     "Nature",
-#     "Landscape",
-#     "Buildings",
-#     "Vehicles",
-#     "Objects",
-#     "Food",
-#     "Furniture",
-#     "Appliances",
-#     "Sports",
-#     "Instruments",
-#     "Electronics",
-#     "Clothing",
-#     "Art & Music",
-#     "Fashion",
-#     "Luxury",
-#     "Technology",
-#     "Accessories"
-# ]
-
 categories = [
     "Animals & Wildlife",  
     "Landscapes & Nature",  
