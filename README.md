@@ -1,5 +1,6 @@
 # PixFushion
 
+## Installation
 ```powershell
 git clone https://github.com/KarthikSapaliga/PixFushion.git
 
@@ -18,4 +19,7 @@ cd ..
 python server.py
 npm run dev
 ```
-
+### OR
+```powershell
+.\pixfushion_setup.ps1
+```
