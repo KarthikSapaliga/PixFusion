@@ -36,9 +36,9 @@ To run this project, make sure you have the following installed:
 
 ## 💡 Usage
 ```
-git clone https://github.com/KarthikSapaliga/PixFushion.git
+git clone https://github.com/KarthikSapaliga/PixFusion.git
 
-cd PixFushion
+cd PixFusion
 npm install
 
 python -m venv env
