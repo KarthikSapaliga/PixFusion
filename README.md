@@ -97,3 +97,7 @@ We welcome contributions! Please follow these rules to help keep the codebase or
     </td>
   </tr>
 </table>
+
+
+## 📊 GitHub Stats
+![Alt](https://repobeats.axiom.co/api/embed/9e877a1573e724aead2a9a2529c600ccf1c623bf.svg "Repobeats analytics image")
