@@ -61,7 +61,8 @@ npm run dev
 ```
 ## 🏅 Contributors
 
-<table>
+<div>
+  <table>
   <tr>
     <td align="center">
       <img src="https://github.com/KarthikSapaliga.png" width="80"/><br>
@@ -77,3 +78,4 @@ npm run dev
     </td>
   </tr>
 </table>
+</div>
