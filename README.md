@@ -80,7 +80,8 @@ We welcome contributions! Please follow these rules to help keep the codebase or
 
 ## 🏅 Contributors
 
-<table>
+<div>
+  <table>
   <tr>
     <td align="center">
       <img src="https://github.com/KarthikSapaliga.png" width="80"/><br>
@@ -96,6 +97,3 @@ We welcome contributions! Please follow these rules to help keep the codebase or
     </td>
   </tr>
 </table>
-
-
-
