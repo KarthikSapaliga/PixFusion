@@ -59,6 +59,25 @@ python server.py
 ```
 npm run dev
 ```
+
+## 🛠️ Contribution Guidelines
+
+We welcome contributions! Please follow these rules to help keep the codebase organized:
+
+| Type            | Commit To Branch |
+|-----------------|------------------|
+| 🖼️ Frontend UI   | `frontend`       |
+| 🔌 Backend Logic | `backend`        |
+| 📚 Documentation | `documentation`  |
+
+### ✅ How to Contribute
+
+1. **Fork** the repository and clone it.
+2. **Create a branch** from the correct base branch.
+3. **Make your changes** and commit with a clear message.
+4. **Push** your branch and open a **Pull Request**.
+
+
 ## 🏅 Contributors
 
 <div>
@@ -78,4 +97,3 @@ npm run dev
     </td>
   </tr>
 </table>
-</div>
