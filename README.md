@@ -92,8 +92,8 @@ We welcome contributions! Please follow these rules to help keep the codebase or
       <a href="https://github.com/SwastikMoolya">@SwastikMoolya</a>
     </td>
     <td align="center">
-      <img src="https://github.com/Nithin-Nyk.png" width="80"/><br>
-      <a href="https://github.com/Nithin-Nyk">@Nithin-Nyk</a>
+      <img src="https://github.com/nyknithin.png" width="80"/><br>
+      <a href="https://github.com/nyknithin">@nyknithin</a>
     </td>
   </tr>
 </table>
